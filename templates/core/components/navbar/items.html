@@ -1,0 +1,48 @@
+{% load static %}
+
+<li class="nav-item">
+    <a class="nav-link spinner-loading" style="color: black;" href="/index/"><img src="{% static 'icons/home.svg' %}" width="25rem"
+            style="margin-right: 20px;" alt="home"> Home</a>
+</li>
+
+<!-- Add -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="color: black;">
+        <img src="{% static 'icons/add.svg' %}" width="25rem" style="margin-right: 20px;" alt="courses">
+        Cadastrar
+    </a>
+
+    <!-- Dropdown -->
+    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown" style="border: none;">
+
+        <li><a class="dropdown-item spinner-loading" href="/category/"> 
+            <img src="{% static 'icons/arrow.svg'%}" width="8rem" style="margin-right: 10px;" alt="courses"> Categoria</a></li>
+
+            <li><a class="dropdown-item spinner-loading" href="/subcategory/"> 
+                <img src="{% static 'icons/arrow.svg'%}" width="8rem" style="margin-right: 10px;" alt="courses"> SubCategoria</a></li>
+
+        <li><a class="dropdown-item spinner-loading" href="/url_link/"> 
+            <img src="{% static 'icons/arrow.svg'%}" width="8rem" style="margin-right: 10px;" alt="courses"> URL</a></li>
+
+    </ul>
+</li>
+
+<!-- List URLs -->
+<li><a href="/list_url/" style='text-decoration: none; color: black'> 
+    <img src="{% static 'icons/list.svg' %}" width="25rem" style="margin-right: 20px;" alt="courses"> Lista de URLs</a></li>
+
+<!-- Tutorial -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="color: black;">
+        <img src="{% static 'icons/tutorial.svg' %}" width="25rem" style="margin-right: 20px;" alt="courses">
+        Tutorials
+    </a>
+
+    <!-- Dropdown -->
+    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown" style="border: none;">
+        <li><a class="dropdown-item spinner-loading" href="/dashboard/tutorials/tec/Java/"> 
+            <img src="{% static 'icons/arrow.svg'%}" width="8rem" style="margin-right: 10px;" alt="courses"> Java</a></li>
+    </ul>
+</li>

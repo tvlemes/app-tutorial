@@ -1,0 +1,63 @@
+{% load static %}
+<div id="main-wrapper" class="container" style="margin-bottom: 2rem;">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="p-3">
+                                <div class="mb-2">
+                                    <h3 class="h4 font-weight-bold text-theme mb-3">Cadastro de Categoria</h3>
+                                    {% for message in messages %}
+                                        <div align='left'>
+                                            <strong style="color: rgb(56, 221, 84);">{{ message }}</strong>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+
+                                {% comment %} <h6 class="h5 mb-3">Área de cadastro de Link</h6> {% endcomment %}
+
+                                <form action="/category/add" method="POST">{% csrf_token %}
+                                    <div class="form-group mb-3">
+                                        <label for="exampleInputEmail1">Nome da Categoria</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" name='name' placeholder='Nome da Categoria.'>
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        <label for="exampleFormControlTextarea1" placeholder='Descrição'>Descrição da Categoria</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;" name="description" placeholder='Descrição detalhada da Categoria.'></textarea>
+                                    </div>
+                                   
+                                    <div class="form-group mb-3">
+                                        <label for="exampleInputEmail1">Tags</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" name='tags' placeholder='Ex.: #tag1#tag2#tag3'>
+                                    </div>
+                                   
+                                    <div>
+                                        <button type="submit" class="btn btn-theme">Cadastrar</button>
+                                        <a type="button" href='/index/' class="btn btn-outline-danger">Cancelar</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right" style="background-image: url({% static 'images/category.jpg' %})">
+                                <div class="overlay rounded-right"></div>
+                                <div class="account-testimonial">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end card-body -->
+            </div>
+            <!-- end card -->
+            <!-- end row -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- Row -->
+</div>

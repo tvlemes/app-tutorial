@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+
+    
+    <!-- Include Header -->
+    {% include "core/models/header.html" %}
+    
+</head>
+
+<body>
+    
+    <!-- Include Navbar -->
+    {% include "core/components/navbar/navbar.html" %}
+
+    <!-- Include Body -->
+    <div class="content-footer">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+
+    <!-- Include Footer -->
+    {% include "core/models/footer.html" %}
+    
+    {% include 'core/components/spinner.html' %}
+</body>
+
+<!-- JS -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(".spinner-loading").click(function() {
+        $('#loading').css("display","block");
+    });
+</script>
+</html>
+</html>
